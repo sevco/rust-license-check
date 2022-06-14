@@ -1,0 +1,20 @@
+name: 'rust-license-check'
+description: 'Run cargo license and check for license violations'
+author: 'actions-rs team'
+branding:
+  icon: play-circle
+  color: black
+inputs:
+  token:
+    description: GitHub Actions token
+    required: true
+  licenses:
+    description: A list of licenses that should be reported as a violation
+    required: false
+    default: GPL 2.0,GPL 3.0,AGPL 3.0,LGPL 2.1,LGPL 3.0
+
+
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
